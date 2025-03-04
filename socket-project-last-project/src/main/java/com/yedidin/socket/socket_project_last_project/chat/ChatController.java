@@ -1,5 +1,5 @@
 package com.yedidin.socket.socket_project_last_project.chat;
-
+import lombok.*;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
