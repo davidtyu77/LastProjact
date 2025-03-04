@@ -1,8 +1,9 @@
 package com.yedidin.socket.socket_project_last_project.config;
 
-
-import com.yedidin.socket.socket_project_last_project.chat.ChatMessage;
-import com.yedidin.socket.socket_project_last_project.chat.MessageType;
+import com.yedidin.socket.socket_project_last_project.WebSocket.AlertMessage;
+import com.yedidin.socket.socket_project_last_project.WebSocket.AlertMessage;
+import com.yedidin.socket.socket_project_last_project.WebSocket.EventType;
+import com.yedidin.socket.socket_project_last_project.WebSocket.EventType;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +12,6 @@ import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
-
 
 @Component
 @RequiredArgsConstructor
@@ -28,12 +28,11 @@ public class WebSocketEventListener {
         String username = (String) headerAccessor.getSessionAttributes().get("username");
         if(username != null){
         log.info("User disconnect {}",username);
-        var chatMessage = ChatMessage.builder()
-                .type(MessageType.LEAVE)
-                .sender(username)
+        var eventMessage = AlertMessage.builder()
+                .type(EventType.LEAVE)
+                .firstName(username)
                 .build();
-            messageTemplate.convertAndSend("/topic/public",chatMessage);
+            messageTemplate.convertAndSend("/topic/public",eventMessage);
         }
     }
-
 }
