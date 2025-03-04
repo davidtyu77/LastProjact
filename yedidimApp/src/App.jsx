@@ -1,19 +1,12 @@
-
-import { useState } from 'react'
-import './App.css'
-import Event from './event.jsx'
-
+import "./App.css";
+import ChatApp from "./components/ChatApp";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-
-
   return (
     <>
-      <Event />
+      <ChatApp />
     </>
-  )
+  );
 }
 
 export default App;
