@@ -1,9 +1,13 @@
+
 import { useState } from 'react'
 import './App.css'
 import Event from './event.jsx'
 
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+
 
   return (
     <>
@@ -12,4 +16,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
