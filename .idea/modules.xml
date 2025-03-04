@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/socket-project-last-project.iml" filepath="$PROJECT_DIR$/.idea/socket-project-last-project.iml" />
+
+      <module fileurl="file://$PROJECT_DIR$/.idea/FinalProject.iml" filepath="$PROJECT_DIR$/.idea/FinalProject.iml" />
+
     </modules>
   </component>
 </project>
