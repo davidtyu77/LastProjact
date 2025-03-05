@@ -1,4 +1,4 @@
-package com.yedidin.socket.socket_project_last_project.config;
+package com.yedidin.socket.socket_project_last_project.WebSocket;
 
 
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +13,8 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws")
-                .setAllowedOrigins("http://localhost:5173")
+        registry.addEndpoint("/websocket")
+                .setAllowedOrigins("*")
                 .withSockJS();
     }
 
