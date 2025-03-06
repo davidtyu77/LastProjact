@@ -23,10 +23,9 @@ public interface EventRepository extends JpaRepository<Event, Long> {
     List<Event> findByPriority(String priority);
 
     // Custom query to find events by user and friend IDs
-    List<Event> findByUser_IdAndFriend_Id(Long userId, Long friendId);
+    List<Event> findByUserId(Long userId);
 
-    // Custom query to find a single event by its ID (just in case)
-    Optional<Event> findById(Long id);
+    List<Event> findByFriendId(Long friendId);
 }
 
 
