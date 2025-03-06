@@ -15,11 +15,11 @@ public class Event {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private Long user_Id;
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "friend_id", nullable = true)
-    private Long friend_Id;
+    private User friend;
 
     @Column(name = "latitude", nullable = false)
     private BigDecimal latitude;
@@ -42,9 +42,9 @@ public class Event {
     // Constructors, getters, and setters
     public Event() {}
 
-    public Event(Long user, Long friend, BigDecimal latitude, BigDecimal longitude, String eventDescription, String isDone, String priority, LocalDateTime date) {
-        this.user_Id = user;
-        this.friend_Id = friend;
+    public Event(User user, User friend, BigDecimal latitude, BigDecimal longitude, String eventDescription, String isDone, String priority, LocalDateTime date) {
+        this.user = user;
+        this.friend = friend;
         this.latitude = latitude;
         this.longitude = longitude;
         this.eventDescription = eventDescription;
@@ -59,22 +59,6 @@ public class Event {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getUser_Id() {
-        return user_Id;
-    }
-
-    public void setUser_Id(Long user) {
-        this.user_Id = user;
-    }
-
-    public Long getFriend_Id() {
-        return friend_Id;
-    }
-
-    public void setFriend_Id(Long friend) {
-        this.friend_Id = friend;
     }
 
     public BigDecimal getLatitude() {
@@ -123,5 +107,21 @@ public class Event {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public User getFriend() {
+        return friend;
+    }
+
+    public void setFriend(User friend) {
+        this.friend = friend;
     }
 }
