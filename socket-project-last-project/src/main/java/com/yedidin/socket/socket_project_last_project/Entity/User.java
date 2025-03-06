@@ -26,12 +26,12 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "role_name", nullable = false)
-    private String role;
+    private Role role;
 
     // Constructors, getters, and setters
     public User() {}
 
-    public User(String firstName, String lastName, String email, String password, String role) {
+    public User(String firstName, String lastName, String email, String password, Role role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -79,11 +79,11 @@ public class User {
         this.password = password;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 }

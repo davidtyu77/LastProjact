@@ -8,7 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
+//
+//    // Custom query to find a role by its name
+//    Optional<Role> findById(long RoleId);
 
-    // Custom query to find a role by its name
-    Optional<Role> findByRoleName(String roleName);
 }
