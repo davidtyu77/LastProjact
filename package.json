@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "react-stomp": "^5.1.0",
+    "sockjs": "^0.3.24",
+    "sockjs-client": "^1.6.1"
+  }
+}
